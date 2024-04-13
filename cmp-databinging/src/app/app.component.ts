@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Server } from './server.model';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,23 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'cmp-databinging';
+  serverElements: Server[] = [
+    new Server('server', 'Testserver', 'Just a test!')
+  ];
+
+  onServerAdded(serverData:{serverName: string, serverContent:string}){
+    this.serverElements.push({
+      type: 'server',
+      name: serverData.serverName,
+      content: serverData.serverContent
+    });
+  }
+  onBlueprintAdded(serverData:{serverName: string, serverContent:string}){
+    this.serverElements.push({
+      type: 'blueprint',
+      name: serverData.serverName,
+      content: serverData.serverContent
+    });
+  }
+
 }
