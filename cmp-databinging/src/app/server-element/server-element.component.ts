@@ -19,22 +19,22 @@ export class ServerElementComponent implements OnInit,AfterViewInit{
   console.log('ngOnInit called!');
   console.log('Text Content: ', + this.header?.nativeElement.textContent);
  }
- ngDoCheck(){
-  console.log('ngDoCheck called!');
- }
+//  ngDoCheck(){
+//   console.log('ngDoCheck called!');
+//  }
  ngAfterContentInit(){
   console.log('ngAfterContentInit called!');
  }
- ngAfterContentChecked(){
-  console.log('ngAfterContentChecked called!');
- }
+//  ngAfterContentChecked(){
+//   console.log('ngAfterContentChecked called!');
+//  }
  ngAfterViewInit(){
   console.log('ngAfterViewInit called!');
   console.log('Text Content: ', + this.header?.nativeElement.textContent);
  }
- ngAfterViewChecked(){
-  console.log('ngAfterViewChecked called!');
- }
+//  ngAfterViewChecked(){
+//   console.log('ngAfterViewChecked called!');
+//  }
  ngOnDestroy(){
   console.log('ngOnDestroy called!');
  }
