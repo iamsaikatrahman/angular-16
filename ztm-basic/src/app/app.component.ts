@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'ztm-basic';
+  name = "Saikat"
+
+  getUserName(){
+    return this.name;
+  }
 }
