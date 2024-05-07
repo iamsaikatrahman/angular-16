@@ -14,8 +14,14 @@ export class ModalService {
 
   register(id:string){
     this.modals.push({id, visible: false})
-   //console.log(this.modals)
   }
+
+  unregister(id: string){
+    this.modals = this.modals.filter(
+      element => element.id !== id
+    )
+  }
+
   isModalOpen(id: string): boolean{
     return !!this.modals.find(element => element.id === id)?.visible;
   }
