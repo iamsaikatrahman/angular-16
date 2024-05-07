@@ -13,6 +13,6 @@ export class NavComponent {
   }
   openModal($e: Event){
     $e.preventDefault(); // Users will not unexpectedly be redirected to a different page.
-    this.modal.toggleModal();
+    this.modal.toggleModal('auth');
   }
 }
